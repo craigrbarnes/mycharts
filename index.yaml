@@ -1,0 +1,509 @@
+apiVersion: v1
+entries:
+  ambassador:
+  - apiVersion: v2
+    appVersion: 1.4.2
+    created: "2023-04-05T22:33:49.64811262Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    description: A Helm chart for deploying ambassador for gen3
+    digest: dc08712ee8fe66fb2855320215ca0f10a58ba18cd9f1974066366ecff0edf147
+    name: ambassador
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/ambassador-0.1.5/ambassador-0.1.5.tgz
+    version: 0.1.5
+  arborist:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:49.790956217Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    - condition: postgres.separate
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for gen3 arborist
+    digest: f852ccdff7c32e028f75ee80fd8d3db989efc8273d129bda0da83cb986b37e0a
+    name: arborist
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/arborist-0.1.6/arborist-0.1.6.tgz
+    version: 0.1.6
+  argo-wrapper:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:49.954309088Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    description: A Helm chart for gen3 Argo Wrapper Service
+    digest: ffc2dadac53be2c2a95ba7084194a6278a4b337b54e9a7cf979d95738c744f44
+    name: argo-wrapper
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/argo-wrapper-0.1.2/argo-wrapper-0.1.2.tgz
+    version: 0.1.2
+  audit:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:50.082285143Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    - condition: postgres.separate
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for Kubernetes
+    digest: 6511d6645a1ba7fec5456ccb86aa8a425511e60ad4d2f016f32e5f29f0367fdb
+    name: audit
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/audit-0.1.6/audit-0.1.6.tgz
+    version: 0.1.6
+  aws-es-proxy:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:50.203667545Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    description: A Helm chart for AWS ES Proxy Service for gen3
+    digest: e6213184832cd8424d7a63145d50c4c67b33fdbcfeb3051d72103174f1671fa8
+    name: aws-es-proxy
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/aws-es-proxy-0.1.4/aws-es-proxy-0.1.4.tgz
+    version: 0.1.4
+  common:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:50.349395009Z"
+    description: A Helm chart for provisioning databases in gen3
+    digest: fa442328e415200a2a7304545ff9442606c8c0d233e4bb862ef9821fbc05f40c
+    name: common
+    type: library
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/common-0.1.5/common-0.1.5.tgz
+    version: 0.1.5
+  dicom-server:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:50.469611384Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    description: A Helm chart for gen3 Dicom Server
+    digest: 7c400de7f87f9e29f03e2cdf506b89d1714273d4928663607ec8bfcb8f2776bc
+    name: dicom-server
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/dicom-server-0.1.3/dicom-server-0.1.3.tgz
+    version: 0.1.3
+  dicom-viewer:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:50.593105235Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    description: A Helm chart for gen3 Dicom Viewer
+    digest: bdd226943cb06fcecaaf56091b6aaf7f3acac66aed1383c2a9e28fceea2b78ae
+    name: dicom-viewer
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/dicom-viewer-0.1.3/dicom-viewer-0.1.3.tgz
+    version: 0.1.3
+  elasticsearch:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-04-05T22:33:50.716310379Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    description: A Helm chart for Kubernetes
+    digest: e8cf63c39e87f601d7a98f293e265ab0cb156ba9316cb65f5a16ad31dfb4ec63
+    name: elasticsearch
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/elasticsearch-0.1.3/elasticsearch-0.1.3.tgz
+    version: 0.1.3
+  fence:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:50.883652236Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    - condition: postgres.separate
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for gen3 Fence
+    digest: b65a8feaa980a78a7217ad599c3147e5e566c9292f134f3dabf36039fb3fc2d6
+    name: fence
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/fence-0.1.6/fence-0.1.6.tgz
+    version: 0.1.6
+  frontend-framework:
+  - apiVersion: v2
+    appVersion: PXP-10877
+    created: "2023-04-05T22:33:50.994051162Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    description: A Helm chart for the gen3 frontend framework
+    digest: fb6c4d947251950933a8a3071a81b28c38861ce5723b354876a4f68bcab02645
+    name: frontend-framework
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/frontend-framework-0.0.5/frontend-framework-0.0.5.tgz
+    version: 0.0.5
+  gen3:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:51.226407779Z"
+    dependencies:
+    - condition: ambassador.enabled
+      name: ambassador
+      repository: file://../ambassador
+      version: 0.1.5
+    - condition: arborist.enabled
+      name: arborist
+      repository: file://../arborist
+      version: 0.1.6
+    - condition: argo-wrapper.enabled
+      name: argo-wrapper
+      repository: file://../argo-wrapper
+      version: 0.1.2
+    - condition: audit.enabled
+      name: audit
+      repository: file://../audit
+      version: 0.1.6
+    - condition: aws-es-proxy.enabled
+      name: aws-es-proxy
+      repository: file://../aws-es-proxy
+      version: 0.1.4
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    - condition: frontend-framework.enabled
+      name: frontend-framework
+      repository: file://../frontend-framework
+      version: 0.0.5
+    - condition: fence.enabled
+      name: fence
+      repository: file://../fence
+      version: 0.1.6
+    - condition: guppy.enabled
+      name: guppy
+      repository: file://../guppy
+      version: 0.1.5
+    - condition: hatchery.enabled
+      name: hatchery
+      repository: file://../hatchery
+      version: 0.1.4
+    - condition: indexd.enabled
+      name: indexd
+      repository: file://../indexd
+      version: 0.1.6
+    - condition: manifestservice.enabled
+      name: manifestservice
+      repository: file://../manifestservice
+      version: 0.1.7
+    - condition: metadata.enabled
+      name: metadata
+      repository: file://../metadata
+      version: 0.1.6
+    - condition: peregrine.enabled
+      name: peregrine
+      repository: file://../peregrine
+      version: 0.1.7
+    - condition: pidgin.enabled
+      name: pidgin
+      repository: file://../pidgin
+      version: 0.1.5
+    - condition: portal.enabled
+      name: portal
+      repository: file://../portal
+      version: 0.1.4
+    - condition: requestor.enabled
+      name: requestor
+      repository: file://../requestor
+      version: 0.1.6
+    - condition: revproxy.enabled
+      name: revproxy
+      repository: file://../revproxy
+      version: 0.1.6
+    - condition: sheepdog.enabled
+      name: sheepdog
+      repository: file://../sheepdog
+      version: 0.1.7
+    - condition: ssjdispatcher.enabled
+      name: ssjdispatcher
+      repository: file://../ssjdispatcher
+      version: 0.1.3
+    - condition: wts.enabled
+      name: wts
+      repository: file://../wts
+      version: 0.1.7
+    - condition: global.dev
+      name: elasticsearch
+      repository: file://../elasticsearch
+      version: 0.1.3
+    - condition: global.dev
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: Helm chart to deploy Gen3 Data Commons
+    digest: 333e0eba06b6c9074df3aa417aab6b15e496b530d3e7d559c1b1bb017b879a94
+    maintainers:
+    - email: ahilt@uchicago.edu
+      name: ahilt
+    - email: ajoa@uchicago.edu
+      name: ajoaugustine
+    - email: emalinowski@uchicago.edu
+      name: emalinowski
+    - email: elisemcastle@uchicago.edu
+      name: EliseCastle23
+    - email: qureshi@uchicago.edu
+      name: jawadqur
+    name: gen3
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/gen3-0.1.10/gen3-0.1.10.tgz
+    version: 0.1.10
+  guppy:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:51.332128099Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    description: A Helm chart for gen3 Guppy Service
+    digest: e4d17101eff3fee8ca5b79a8c725b8b13e450c209dad2b974135d2bf080a27d1
+    name: guppy
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/guppy-0.1.5/guppy-0.1.5.tgz
+    version: 0.1.5
+  hatchery:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:51.449366682Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    description: A Helm chart for gen3 Hatchery
+    digest: f21b2c9bc1e54182b5be63e898fbe9e7dd8b0e4ba9ea19bd7e6fcdd643faee8d
+    name: hatchery
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/hatchery-0.1.4/hatchery-0.1.4.tgz
+    version: 0.1.4
+  indexd:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:51.58957899Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    - condition: postgres.separate
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for gen3 indexd
+    digest: a9fecfc02b06754607663a6e4465502792ebdb14907dede7ee0518c7d1377ca6
+    name: indexd
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/indexd-0.1.6/indexd-0.1.6.tgz
+    version: 0.1.6
+  manifestservice:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:51.699442004Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    description: A Helm chart for Kubernetes
+    digest: e4666dc20a71f74901b821131db585a53c39b5d0ae0b5f39dacc97073ba58f26
+    name: manifestservice
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/manifestservice-0.1.7/manifestservice-0.1.7.tgz
+    version: 0.1.7
+  metadata:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:51.828393355Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    - condition: postgres.separate
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for gen3 Metadata Service
+    digest: 3e13c49d2a8bfdf63e1fd3426ac4096e1abd727f80a49559ca528572942bc290
+    name: metadata
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/metadata-0.1.6/metadata-0.1.6.tgz
+    version: 0.1.6
+  peregrine:
+  - apiVersion: v2
+    appVersion: "2023.01"
+    created: "2023-04-05T22:33:51.965658797Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    - condition: postgres.separate
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for gen3 Peregrine service
+    digest: 7358ec627ce276dbd9de2941c7a8a57660da5d6fbfd3e6a3e83f3ae1f12288d0
+    name: peregrine
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/peregrine-0.1.7/peregrine-0.1.7.tgz
+    version: 0.1.7
+  pidgin:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:52.094539446Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    description: A Helm chart for gen3 Pidgin Service
+    digest: 65ca4d9508e866736ffda6cab99fc6f4ef7ad3cdf990061118280da6b66fcec9
+    name: pidgin
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/pidgin-0.1.5/pidgin-0.1.5.tgz
+    version: 0.1.5
+  portal:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:52.221707256Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    description: A Helm chart for gen3 data-portal
+    digest: 647c2f324a103a50163bf9688f2aaa0b8abd8596d8ca11b642595460f0c77002
+    name: portal
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/portal-0.1.4/portal-0.1.4.tgz
+    version: 0.1.4
+  requestor:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:52.346748718Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    - condition: postgres.separate
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for gen3 Requestor Service
+    digest: 4ec7d33e835562f401719e80018c30347c439a5c3934ec5bdd80a2f8bb19ca90
+    name: requestor
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/requestor-0.1.6/requestor-0.1.6.tgz
+    version: 0.1.6
+  revproxy:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:52.46309788Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    description: A Helm chart for gen3 revproxy
+    digest: a170cf1394fa047ef99124eeb6dde3ff9e1422e57b5ada4a1dd416a86bdc7a43
+    name: revproxy
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/revproxy-0.1.6/revproxy-0.1.6.tgz
+    version: 0.1.6
+  sheepdog:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:52.589480372Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    - condition: postgres.separate
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for gen3 Sheepdog Service
+    digest: 9a3aecc16652ae10718b6ddeafea7fda496d7bac665ee8e609e3f64f60a8b976
+    name: sheepdog
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/sheepdog-0.1.7/sheepdog-0.1.7.tgz
+    version: 0.1.7
+  ssjdispatcher:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:52.707572375Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    description: A Helm chart for gen3 ssjdispatcher
+    digest: 8ae13fce349fdfc3cd21c688e724017e7f5cc48276094dca9b2e03085901fa53
+    name: ssjdispatcher
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/ssjdispatcher-0.1.3/ssjdispatcher-0.1.3.tgz
+    version: 0.1.3
+  wts:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-05T22:33:52.831589413Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    - condition: postgres.separate
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: A Helm chart for gen3 workspace token service
+    digest: f3e57a7085eee79f393bd7cfde8e3420dba90eba156fbb8cf958e09d8f9ddf31
+    name: wts
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/wts-0.1.7/wts-0.1.7.tgz
+    version: 0.1.7
+generated: "2023-04-05T22:33:52.831625114Z"
