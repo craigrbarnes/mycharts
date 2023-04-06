@@ -161,6 +161,20 @@ entries:
   frontend-framework:
   - apiVersion: v2
     appVersion: PXP-10877
+    created: "2023-04-06T16:30:39.492984742Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    description: A Helm chart for the gen3 frontend framework
+    digest: 8367ab6f5ea97e2809ef97ed4ace52e64436f6bc068b688c33bb4ffb35d394f2
+    name: frontend-framework
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/frontend-framework-0.0.7/frontend-framework-0.0.7.tgz
+    version: 0.0.7
+  - apiVersion: v2
+    appVersion: PXP-10877
     created: "2023-04-05T22:33:50.994051162Z"
     dependencies:
     - name: common
@@ -174,6 +188,119 @@ entries:
     - https://github.com/craigrbarnes/mycharts/releases/download/frontend-framework-0.0.5/frontend-framework-0.0.5.tgz
     version: 0.0.5
   gen3:
+  - apiVersion: v2
+    appVersion: master
+    created: "2023-04-06T16:30:39.705637135Z"
+    dependencies:
+    - condition: ambassador.enabled
+      name: ambassador
+      repository: file://../ambassador
+      version: 0.1.5
+    - condition: arborist.enabled
+      name: arborist
+      repository: file://../arborist
+      version: 0.1.6
+    - condition: argo-wrapper.enabled
+      name: argo-wrapper
+      repository: file://../argo-wrapper
+      version: 0.1.2
+    - condition: audit.enabled
+      name: audit
+      repository: file://../audit
+      version: 0.1.6
+    - condition: aws-es-proxy.enabled
+      name: aws-es-proxy
+      repository: file://../aws-es-proxy
+      version: 0.1.4
+    - name: common
+      repository: file://../common
+      version: 0.1.5
+    - condition: frontend-framework.enabled
+      name: frontend-framework
+      repository: file://../frontend-framework
+      version: 0.0.7
+    - condition: fence.enabled
+      name: fence
+      repository: file://../fence
+      version: 0.1.6
+    - condition: guppy.enabled
+      name: guppy
+      repository: file://../guppy
+      version: 0.1.5
+    - condition: hatchery.enabled
+      name: hatchery
+      repository: file://../hatchery
+      version: 0.1.4
+    - condition: indexd.enabled
+      name: indexd
+      repository: file://../indexd
+      version: 0.1.6
+    - condition: manifestservice.enabled
+      name: manifestservice
+      repository: file://../manifestservice
+      version: 0.1.7
+    - condition: metadata.enabled
+      name: metadata
+      repository: file://../metadata
+      version: 0.1.6
+    - condition: peregrine.enabled
+      name: peregrine
+      repository: file://../peregrine
+      version: 0.1.7
+    - condition: pidgin.enabled
+      name: pidgin
+      repository: file://../pidgin
+      version: 0.1.5
+    - condition: portal.enabled
+      name: portal
+      repository: file://../portal
+      version: 0.1.4
+    - condition: requestor.enabled
+      name: requestor
+      repository: file://../requestor
+      version: 0.1.6
+    - condition: revproxy.enabled
+      name: revproxy
+      repository: file://../revproxy
+      version: 0.1.6
+    - condition: sheepdog.enabled
+      name: sheepdog
+      repository: file://../sheepdog
+      version: 0.1.7
+    - condition: ssjdispatcher.enabled
+      name: ssjdispatcher
+      repository: file://../ssjdispatcher
+      version: 0.1.3
+    - condition: wts.enabled
+      name: wts
+      repository: file://../wts
+      version: 0.1.7
+    - condition: global.dev
+      name: elasticsearch
+      repository: file://../elasticsearch
+      version: 0.1.3
+    - condition: global.dev
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.9.13
+    description: Helm chart to deploy Gen3 Data Commons
+    digest: 3411226a20307fb93814d0248964ece889446bee6f749fd96ebf52fd95407862
+    maintainers:
+    - email: ahilt@uchicago.edu
+      name: ahilt
+    - email: ajoa@uchicago.edu
+      name: ajoaugustine
+    - email: emalinowski@uchicago.edu
+      name: emalinowski
+    - email: elisemcastle@uchicago.edu
+      name: EliseCastle23
+    - email: qureshi@uchicago.edu
+      name: jawadqur
+    name: gen3
+    type: application
+    urls:
+    - https://github.com/craigrbarnes/mycharts/releases/download/gen3-0.1.12/gen3-0.1.12.tgz
+    version: 0.1.12
   - apiVersion: v2
     appVersion: master
     created: "2023-04-05T22:54:46.990240961Z"
@@ -619,4 +746,4 @@ entries:
     urls:
     - https://github.com/craigrbarnes/mycharts/releases/download/wts-0.1.7/wts-0.1.7.tgz
     version: 0.1.7
-generated: "2023-04-05T22:54:46.990258262Z"
+generated: "2023-04-06T16:30:39.705661235Z"
